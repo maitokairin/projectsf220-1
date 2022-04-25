@@ -22,7 +22,7 @@
 <table class ='viper' align="center">
   
   {#if amount_array == 0}
-    <h2 align = "center" >ยังไม่มีนักศึกษาคนใดขอโควต้ารายวิชานี้</h2>
+    <h2>ยังไม่มีนักศึกษาคนใดขอโควต้ารายวิชานี้</h2>
   {:else}
     <tr>
       <th class = 'id'>STUDENT ID</th>
@@ -41,11 +41,14 @@
  </table>
 
 <style>
+  .viper h2{
+    text-align: center;
+  }
   *{
     font-family: 'popins', sans-serif;
   }
   .astra{
-    text-align: left;
+    text-align: center;
     padding-top: 120px;
     padding-left: 120px;
     font-size:26px;

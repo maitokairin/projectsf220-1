@@ -1,7 +1,9 @@
 <script>
-  import {mode, ismenuopen, isLogin, isAdmin, account} from "./stores.js";
+  import {mode, ismenuopen, isLogin, isAdmin, account, userAccounts} from "./stores.js";
   let close = false;
   let name = '';
+  let eiei = '';
+  eiei = $userAccounts[$account].name;
   function Myfunction(){
     if(close === true){
       $ismenuopen = false;
@@ -90,8 +92,10 @@
 </ul>
 </div>
 
-<div class = 'welcome'>
-  <img src = '/src/pic/OXWARDUNIVERSITY2.png' class = 'welcomepic' width = '1000' />
+<div class = 'welcome' class:active = {$mode === 'menu'}>
+  <img src = '/src/pic/OXWARDUNIVERSITY2.png' class = 'welcomepic' width = '600' />
+  <label class = 'welcomeFont'>WELCOME</label>
+  <label class = 'welcomeFont1'>{eiei}</label>
 </div>
 
 <label class = 'toggle' class:toggleA={$ismenuopen === false} on:click = {Myfunction}>
@@ -103,14 +107,29 @@
 </label>
 
 <style>
+  .welcomeFont1{
+    font-size: 50px;
+    position: fixed;
+    top: 77%;
+    left: 950px;
+  }
+  .welcomeFont{
+    font-size: 50px;
+    position: fixed;
+    top: 77%;
+  }
   .welcomepic{
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 26%;
+    left: 35%;
   }
   .welcome{
+    display: none;
+  }
+  .welcome.active{
+    display: flex;
     position: fixed;
-    top: 15%;
+    top: 5%;
     left: 35%;
     padding-right: 750px;
     padding-bottom: 750px;

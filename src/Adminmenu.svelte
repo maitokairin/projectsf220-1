@@ -1,7 +1,8 @@
 <script>
-  import {mode, ismenuopen, isLogin, isAdmin, account} from "./stores.js";
+  import {mode, ismenuopen, isLogin, isAdmin, account, adminAccounts} from "./stores.js";
   let close = false;
   let name = '';
+  let eiei = $adminAccounts[$account].name;
   function Myfunction(){
     if(close === true){
       $ismenuopen = false;
@@ -72,6 +73,12 @@
 </ul>
 </div>
 
+<div class = 'welcome' class:active = {$mode === 'menu_admin'}>
+  <img src = '/src/pic/OXWARDUNIVERSITY2.png' class = 'welcomepic' width = '600' />
+  <label class = 'welcomeFont'>WELCOME</label>
+  <label class = 'welcomeFont1'>{eiei}</label>
+</div>
+
 <label class = 'toggle' class:toggleA={$ismenuopen === false} on:click = {Myfunction}>
   <ion-icon name="close-circle-outline" class = 'closeicon'></ion-icon>
   <ion-icon name="menu-outline" class = 'open'></ion-icon>
@@ -81,6 +88,36 @@
 </label>
 
 <style>
+  .welcomeFont1{
+    font-size: 50px;
+    position: fixed;
+    top: 77%;
+    left: 950px;
+  }
+  .welcomeFont{
+    font-size: 50px;
+    position: fixed;
+    top: 77%;
+  }
+  .welcomepic{
+    position: fixed;
+    top: 26%;
+    left: 35%;
+  }
+  .welcome{
+    display: none;
+  }
+  .welcome.active{
+    display: flex;
+    position: fixed;
+    top: 5%;
+    left: 35%;
+    padding-right: 750px;
+    padding-bottom: 750px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  }
   .menu{
     position: fixed;
     top: 120px;

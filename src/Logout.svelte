@@ -24,27 +24,27 @@
   }
   
 </script>
-<img class = 'uPic' src='/src/pic/OXWARD UNIVERSITY 3.png' width=700px>
+<img class = 'uPic' src='/src/pic/OXWARDUNIVERSITY3.png' width=700px>
 {#if picNum == 1}
-<img src = '/src/pic/art.jpg' width='80' alt='user' class = 'pPic' />
+<img src = '/src/pic/art.jpg' width='80' alt='user' class = 'pPic' on:click = {() => $mode = 'profile'} />
 {:else if picNum == 2}
-<img src = '/src/pic/eve.jpg' width='80' alt='user' class = 'pPic' />
+<img src = '/src/pic/eve.jpg' width='80' alt='user' class = 'pPic' on:click = {() => $mode = 'profile'} />
 {:else if picNum == 3}
-<img src = '/src/pic/glasses.jpg' width='80' alt='user' class = 'pPic' />
+<img src = '/src/pic/glasses.jpg' width='80' alt='user' class = 'pPic' on:click = {() => $mode = 'profile'} />
 {:else if picNum == 4}
-<img src = '/src/pic/mai.jpg' width='80' alt='user' class = 'pPic' />
+<img src = '/src/pic/mai.jpg' width='80' alt='user' class = 'pPic' on:click = {() => $mode = 'profile'} />
 {:else if picNum == 5}
-<img src = '/src/pic/mon.jpg' width='80' alt='user' class = 'pPic' />
+<img src = '/src/pic/mon.jpg' width='80' alt='user' class = 'pPic' on:click = {() => $mode = 'profile'} />
 {:else if picNum == 6}
-<img src = '/src/pic/moredeaw.jpg' width='80' alt='user' class = 'pPic' />
+<img src = '/src/pic/moredeaw.jpg' width='80' alt='user' class = 'pPic' on:click = {() => $mode = 'profile'} />
 {:else if picNum == 7}
-<img src = '/src/pic/oat.jpg' width='80' alt='user' class = 'pPic' />
+<img src = '/src/pic/oat.jpg' width='80' alt='user' class = 'pPic' on:click = {() => $mode = 'profile'} />
 {:else if picNum == 8}
-<img src = '/src/pic/orn.jpg' width='80' alt='user' class = 'pPic' />
+<img src = '/src/pic/orn.jpg' width='80' alt='user' class = 'pPic' on:click = {() => $mode = 'profile'} />
 {:else if picNum == 9}
-<img src = '/src/pic/yoong.jpg' width='80' alt='user' class = 'pPic' />
+<img src = '/src/pic/yoong.jpg' width='80' alt='user' class = 'pPic' on:click = {() => $mode = 'profile'} />
 {:else}
-<img src = '/src/pic/jackie.jpg' width='80' alt='user' class = 'pPic' />
+<img src = '/src/pic/jackie.jpg' width='80' alt='user' class = 'pPic' on:click = {() => $mode = 'profile_admin'} />
 {/if}
 <label class = 'profile'>{name}</label>
 <label class = 'id'>ID : {id}</label>
@@ -54,6 +54,7 @@
     font-family: 'Poppins', sans-serif;
   }
   .pPic{
+    cursor: pointer;
     border-radius: 50%;
     position: fixed;
     top: 8px;

@@ -146,7 +146,7 @@ let course_data = [
     course_name: 'GENERAL PHYSICS',
     section: '760001',
     time: 'THU 13.30 - 16.30',
-    amount: 99
+    amount: 1
   },
   {
     id: 'TU100',
